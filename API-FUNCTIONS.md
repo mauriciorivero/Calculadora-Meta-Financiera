@@ -50,18 +50,36 @@ Estos archivos son importados por las funciones pero no se despliegan como endpo
 
 Los siguientes archivos están en `.gitignore` y NO se despliegan:
 
+**Scripts de desarrollo:**
 - `server.js` - Servidor de desarrollo local
 - `test-connection.js` - Script de prueba MySQL
 - `test-connection-postgresql.js` - Script de prueba PostgreSQL
 - `convert-to-postgresql.js` - Script de conversión
 
-Estos archivos solo existen localmente para desarrollo.
+**Archivos que Vercel detectaba como funciones serverless:**
+- `md5.js` - Utilidad MD5 (causaba conteo extra)
+- `verify-deployment.js` - Script de verificación (causaba conteo extra)
+
+**Archivos frontend (NO son funciones serverless):**
+- `script.js` - Código JavaScript del frontend
+- `server.example.js` - Plantilla de ejemplo
+
+Estos archivos solo existen localmente para desarrollo o son parte del frontend.
 
 ## 📝 Notas
 
 - **Plan Hobby de Vercel:** Máximo 12 funciones serverless
 - **Uso actual:** 9 funciones (75% del límite)
 - **Margen disponible:** 3 funciones más
+
+## ⚠️ Problema Resuelto
+
+**Problema anterior:** Vercel detectaba 11+ funciones debido a archivos en la raíz:
+- `md5.js` y `verify-deployment.js` eran contados como funciones serverless
+
+**Solución:** Agregados al `.gitignore` y eliminados del repositorio
+
+**Resultado:** Solo 9 funciones serverless reales ✅
 
 ## 🔄 Endpoints Completos
 

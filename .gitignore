@@ -11,6 +11,8 @@ server.js
 test-connection.js
 test-connection-postgresql.js
 convert-to-postgresql.js
+md5.js
+verify-deployment.js
 
 # Vercel
 .vercel
@@ -37,3 +39,6 @@ checklist.md
 DEPLOY-SUPABASE.md
 deploy.md
 security.md
+fix-velce-limit.md
+api-functions.md
+cleanup-repo.sh
