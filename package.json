@@ -1,0 +1,31 @@
+{
+  "name": "calculadora-meta-financiera",
+  "version": "1.0.0",
+  "description": "Calculadora de metas financieras con autenticación de usuarios",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.7.2"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "keywords": [
+    "financial",
+    "goals",
+    "calculator",
+    "savings"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,21 @@
+# Archivos de desarrollo
+server.js
+test-connection.js
+node_modules/
+
+# Archivos de configuración local
+.env
+.env.local
+
+# Archivos de documentación
+DEPLOY.md
+CalculadoraMetaFinancieraReact.jsx
+
+# Archivos del sistema
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,742 @@
+/* ============================================
+   CALCULADORA DE META FINANCIERA - ESTILOS
+   ============================================ */
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    padding: 2rem;
+}
+
+/* ============================================
+   TARJETA PRINCIPAL
+   ============================================ */
+.card {
+    max-width: 42rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+}
+
+/* ============================================
+   ENCABEZADO
+   ============================================ */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.header-center {
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-center h1 {
+    margin-top: 0.5rem;
+}
+
+.header-with-user {
+    flex-wrap: wrap;
+}
+
+.header-with-user h1 {
+    flex: 1;
+}
+
+/* ============================================
+   ICONOS
+   ============================================ */
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-target {
+    color: #4f46e5;
+}
+
+.icon-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-large {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ============================================
+   AUTENTICACIÓN
+   ============================================ */
+.card-auth {
+    max-width: 28rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.auth-form h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.auth-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.auth-success {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #16a34a;
+}
+
+.auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.auth-links a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.auth-links p {
+    color: #6b7280;
+    margin-top: 0.75rem;
+}
+
+/* ============================================
+   MENÚ DE USUARIO
+   ============================================ */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.btn-logout {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #9ca3af;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-logout:hover {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+/* ============================================
+   FORMULARIO
+   ============================================ */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.label-with-icon {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #6366f1;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* Input con prefijo ($) */
+.input-with-prefix {
+    position: relative;
+}
+
+.input-with-prefix .prefix {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.input-with-prefix input {
+    padding-left: 2rem;
+}
+
+/* Quitar flechas de inputs numéricos */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* ============================================
+   SECCIÓN DE PROGRESO
+   ============================================ */
+.progress-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.progress-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.progress-percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+/* ============================================
+   BARRA DE PROGRESO
+   ============================================ */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 2rem;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #6366f1, #9333ea);
+    border-radius: 9999px;
+    transition: width 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+    width: 0%;
+}
+
+.progress-bar-text {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   ESTADÍSTICAS
+   ============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Colores de las tarjetas de estadísticas */
+.stat-green {
+    background-color: #f0fdf4;
+}
+
+.stat-green .stat-value {
+    color: #16a34a;
+}
+
+.stat-orange {
+    background-color: #fff7ed;
+}
+
+.stat-orange .stat-value {
+    color: #ea580c;
+}
+
+.stat-blue {
+    background-color: #eff6ff;
+}
+
+.stat-blue .stat-value {
+    color: #2563eb;
+}
+
+/* ============================================
+   MENSAJES MOTIVACIONALES
+   ============================================ */
+.message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.message p {
+    font-weight: 500;
+}
+
+.message-success {
+    background-color: #dcfce7;
+    border: 1px solid #4ade80;
+}
+
+.message-success p {
+    color: #166534;
+}
+
+.message-progress {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.message-progress p {
+    color: #1e40af;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6366f1, #4f46e5);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #4f46e5, #4338ca);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn-danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+.btn-crear-meta {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Botón volver */
+.btn-back {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-back:hover {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+/* Botón eliminar */
+.btn-delete {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #9ca3af;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.btn-delete:hover {
+    background-color: #fef2f2;
+    color: #ef4444;
+}
+
+/* Header con botón volver */
+.header-with-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-with-back h1 {
+    flex: 1;
+}
+
+/* ============================================
+   LISTA DE METAS
+   ============================================ */
+.metas-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.meta-item:hover {
+    background-color: #f3f4f6;
+    border-color: #6366f1;
+    transform: translateX(4px);
+}
+
+.meta-item-icon {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(to bottom right, #6366f1, #9333ea);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.meta-item-icon svg {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.meta-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.meta-item-nombre {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta-item-detalle {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.meta-item-progreso {
+    width: 4rem;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.meta-item-porcentaje {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.meta-item-arrow {
+    color: #9ca3af;
+    margin-left: 0.75rem;
+}
+
+/* Mini barra de progreso en la lista */
+.meta-item-barra {
+    width: 100%;
+    height: 4px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    margin-top: 0.25rem;
+    overflow: hidden;
+}
+
+.meta-item-barra-fill {
+    height: 100%;
+    background: linear-gradient(to right, #6366f1, #9333ea);
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+/* ============================================
+   ESTADO VACÍO
+   ============================================ */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #9ca3af;
+}
+
+.empty-state svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state span {
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    display: none;
+}
+
+.modal-overlay.visible {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 24rem;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.modal p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .progress-percentage {
+        font-size: 1.25rem;
+    }
+
+    .meta-item {
+        flex-wrap: wrap;
+    }
+
+    .meta-item-progreso {
+        width: 100%;
+        text-align: left;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .meta-item-arrow {
+        display: none;
+    }
+
+    .header-with-back h1 {
+        font-size: 1.25rem;
+    }
+}
