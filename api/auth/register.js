@@ -6,9 +6,9 @@
  * ============================================
  */
 
-const db = require('../lib/db');
-const { success, error, serverError, setCorsHeaders } = require('../lib/response');
-const { hashPassword, generateToken } = require('../lib/auth');
+const db = require('../_lib/db');
+const { success, error, serverError, setCorsHeaders } = require('../_lib/response');
+const { hashPassword, generateToken } = require('../_lib/auth');
 
 module.exports = async (req, res) => {
     // Configurar CORS

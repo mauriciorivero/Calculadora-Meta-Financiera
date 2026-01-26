@@ -6,8 +6,8 @@
  * ============================================
  */
 
-const db = require('../lib/db');
-const { success, error, serverError, notFound, setCorsHeaders } = require('../lib/response');
+const db = require('../_lib/db');
+const { success, error, serverError, notFound, setCorsHeaders } = require('../_lib/response');
 
 module.exports = async (req, res) => {
     // Configurar CORS
